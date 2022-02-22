@@ -64,40 +64,18 @@
                         </div>
                     </perfect-scrollbar>
                 </div>
-                <div class="d-block text-right card-footer"><button type="button" class="btn btn-primary" id="btn">Add Task</button></div>
+                <div class="d-block text-right card-footer">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add
+                    </button>
+                </div>
+            
+
                 
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal2 -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-                <!-- Modal -->
-                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                
+                <!-- Modal2 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -107,7 +85,7 @@
                         </button>
                         </div>
                         <div class="modal-body">
-                            <p>Modal body text goes here.</p>
+                        ...
                         </div>
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -117,22 +95,4 @@
                     </div>
                 </div>
 </body>
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    
-      // получим кнопку id="btn" с помощью которой будем открывать модальное окно
-      const btn = document.querySelector('#btn');
-      // активируем контент id="modal" как модальное окно
-      const modal = new bootstrap.Modal(document.querySelector('#modal'));
-      // при нажатии на кнопку
-      btn.addEventListener('click', function() {
-        // открываем модальное окно
-        modal.show();
-      });
-    
-    });
-    console.log(32);
-</script>
 </html>
