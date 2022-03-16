@@ -64,7 +64,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                                     <div class="widget-content-left">
                                                         <div class="widget-heading">'.$row['name_task'].'</div>
                                                     </div>
-                                                    <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success"> <i class="fa fa-pencil"></i></button> 
+                                                    <div class="widget-content-right"> 
                                                     <a href="delete.php?id='.$row['id'].'"><button class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i></button></a> </div>
                                                 </div>
                                             </div>
