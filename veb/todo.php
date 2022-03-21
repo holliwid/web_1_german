@@ -30,10 +30,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <title>TOdo</title>
 </head>
 <body>
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-        <p>
-            <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
-        </p>
+    <div class="row">
+    <div class="d-flex justify-content-center flex-nowrap">
+        <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+            <!-- <p>
+                <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+            </p> -->
+    </div>
+    </div>
     <div class="row d-flex justify-content-center container">
         <div class="col-md-8">
             <div class="card-hover-shadow-2x mb-3 card">
@@ -86,6 +90,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         Add
                     </button>
                 </div>
+
+                
             
 
                 
@@ -113,6 +119,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                     </div>
                 </div>
+                
 
 
                 <!-- Modal Change -->
@@ -140,6 +147,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                     </div>
                 </div>
-                
+            </div>
+            <p>
+                <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+            </p>
 </body>
 </html>
