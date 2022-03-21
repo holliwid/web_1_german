@@ -65,7 +65,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                                         <div class="widget-heading">'.$row['name_task'].'</div>
                                                     </div>
                                                     <div class="widget-content-right"> 
-                                                    <a href="delete.php?id='.$row['id'].'"><button class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i></button></a> </div>
+                                                        <a href="change_modal.php?id='.$row['id'].'"><button class="border-0 btn-transition btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#changeModal"> <i class="fa fa-pencil"></i></button></a>
+                                                        <a href="delete.php?id='.$row['id'].'"><button class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i></button></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>';
@@ -88,7 +90,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                 
                 
-                <!-- Modal2 -->
+                <!-- Modal ADD -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -108,6 +110,33 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 <input type="submit" class="btn btn-secondary" data-bs-dismiss="modal" value="Save" />
                             </form>
                         </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal Change -->
+                <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <!-- <div class="modal-body">
+                            <input type="text" name="1" class="task_input">
+                        </div> -->
+                        <?php
+                        echo '<div class="modal-footer">
+                            <form action="change.php?id='.$row['id'].'" method="post">
+                                <input type="text" name="task" class="task_input">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-secondary" data-bs-dismiss="modal" value="Save" />
+                            </form>
+                        </div>'
+                        ?>
                     </div>
                     </div>
                 </div>
