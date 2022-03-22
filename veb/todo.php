@@ -122,31 +122,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 
 
 
-                <!-- Modal Change -->
-                <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <!-- <div class="modal-body">
-                            <input type="text" name="1" class="task_input">
-                        </div> -->
-                        <?php
-                        echo '<div class="modal-footer">
-                            <form action="change.php?id='.$row['id'].'" method="post">
-                                <input type="text" name="task" class="task_input">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <input type="submit" class="btn btn-secondary" data-bs-dismiss="modal" value="Save" />
-                            </form>
-                        </div>'
-                        ?>
-                    </div>
-                    </div>
-                </div>
+                
             </div>
             <p>
                 <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
