@@ -19,11 +19,10 @@ echo '
         body{  height: 100%; background-color: #8fbce9;}
         .wrapper{ width: 360px; padding: 20px; }
     </style>
-<body class="" >
-<body class="img js-fullheight " style="background-image: url(images/bg.jpg);">
-    <h1 class="my-5">Change task</h1>
-                <div class="" id="" >
-                            <form action="change.php?id='.$id.'" method="post">
+<body class="img js-fullheight h-100" style="background-image: url(images/bg.jpg);">
+    <h1 class="text-center">Change task</h1>
+                <div class="row justify-content-center text-center" id="" >
+                            <form action="change.php?id='.$id.'" method="post" class="mt-5">
                                 <input type="text" name="task" class="task_input">
                                 <a href="todo.php"><button type="button" class="btn btn-secondary" data-bs-dismiss="">Close</button></a>
                                 <input type="submit" class="btn btn-secondary" data-bs-dismiss="" value="Save" />

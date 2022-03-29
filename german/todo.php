@@ -35,7 +35,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<link rel="stylesheet" href="css/style.css">
     <title>TOdo</title>
 </head>
-<body class="img js-fullheight" style="background-image: url(images/bg.jpg);">
+<body  style="background-image: url(images/bg.jpg);" class="h-100">
+    <section class="">
     <div class="row">
     <div class="d-flex justify-content-center flex-nowrap">
         <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
@@ -64,17 +65,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                     $query->execute([$id]);
                                     foreach($query as $row )
                                     {
-                                    echo '<li class="list-group-item">
+                                    echo '<li class="list-group-item ">
                                             <div class="todo-indicator bg-info"></div>
                                             <div class="widget-content p-0">
-                                                <div class="widget-content-wrapper">
-                                                    <div class="widget-content-left mr-2">
-                                                        <div class="custom-checkbox custom-control"><input class="custom-control-input" id="exampleCustomCheckbox2" type="checkbox"><label class="custom-control-label" for="exampleCustomCheckbox2">&nbsp;</label></div>
-                                                    </div>
+                                                <div class="widget-content-wrapper d-flex">
+                                                    
                                                     <div class="widget-content-left">
                                                         <div class="widget-heading">'.$row['name_task'].'</div>
                                                     </div>
-                                                    <div class="widget-content-right"> 
+                                                    <div class="widget-content-right float-right"> 
                                                         <a href="change_modal.php?id='.$row['id'].'"><button class="border-0 btn-transition btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#changeModal"> <i class="fa fa-pencil"></i></button></a>
                                                         <a href="delete.php?id='.$row['id'].'"><button class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i></button></a>
                                                     </div>
@@ -131,9 +130,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 
             </div>
             <p>
-                <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+                <a href="logout.php" class="btn btn-danger ml-3 float-right">Sign Out of Your Account</a>
             </p>
-
+            </section>
 
             <script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
